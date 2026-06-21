@@ -1,20 +1,34 @@
 import React from "react";
 
+import Login from "./Login";
+
+import Register from "./Register";
+
+import Dashboard from "./Dashboard";
+
+
 
 function App(){
+
 
 return(
 
 <div>
 
-<h1>
-Ranjitha Task Manager
-</h1>
+
+<Register/>
 
 
-<p>
-Manage your daily tasks easily
-</p>
+<hr/>
+
+
+<Login/>
+
+
+<hr/>
+
+
+<Dashboard/>
 
 
 </div>
