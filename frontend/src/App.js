@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./style.css";
 import Login from "./Login";
 
 import Register from "./Register";
