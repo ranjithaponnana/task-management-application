@@ -81,7 +81,39 @@ getTasks();
 
 
 }
+function updateTask(id){
 
+let status = prompt(
+"Enter new status (Pending/Completed)"
+);
+
+
+axios.put(
+
+`http://127.0.0.1:5000/tasks/${id}`,
+
+{
+status:status
+},
+
+{
+headers:{
+Authorization:`Bearer ${token}`
+}
+}
+
+)
+
+.then(()=>{
+
+alert("Task Updated");
+
+getTasks();
+
+});
+
+
+}
 
 
 
@@ -182,6 +214,15 @@ tasks.map(task=>(
 <p>
 Status : {task[4]}
 </p>
+
+
+<button
+
+onClick={()=>updateTask(task[0])}
+
+>
+Update
+</button>
 
 
 <button
